@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>
+            <%= result.Title %>
+        </title>
+        <link rel="stylesheet" href="styleMovie.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1">
+    </head>
+    <body>
+        <h1 class="movieTitle"><%= result.Title %></h1>
+        <div class="movie-show-box">
+            <div class="info-box">
+                <p><span>Year:</span> <%= result.Year %></p>
+                <p><span>Released:</span> <%= result.Released %></p>
+                <p><span>Runtime:</span> <%= result.Runtime %></p>
+                <p><span>Genre:</span> <%= result.Genre %></p>
+                <p><span>Director:</span> <%= result.Director %></p>
+                <p><span>Writer:</span> <%= result.Writer %></p>
+                <p><span>Actors:</span> <%= result.Actors %></p>
+                <p><span>Plot:</span> <%= result.Plot %></p>
+            </div>
+            <img class="moviePoster" src="<%= result.Poster %>" alt="Poster">
+        </div>
+        <div class="ratings-box">
+            <h3>Ratings:</h3>
+            <% result.Ratings.forEach(function(rating) { %>
+                <div class="rating">
+                    <p>Source: <%= rating.Source %></p>
+                    <p>Value: <%= rating.Value %></p>
+                </div>
+            <% }); %>
+        </div>
+    </body>
+</html>

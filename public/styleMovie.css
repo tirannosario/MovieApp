@@ -1,0 +1,57 @@
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+
+.movieTitle
+{
+    margin: 2%;
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-decoration-color: darkcyan;
+}
+
+.movie-show-box
+{
+    padding: 5% 3%;
+    background: lightgray;
+}
+
+.ratings-box
+{
+    text-align: center;
+    margin: 5% auto;
+}
+
+.ratings-box h3
+{
+    color: darkred;
+    font-size: 2em;
+    text-decoration-line: underline;
+}
+
+.rating
+{
+
+    border-bottom: 1px solid black;
+}
+
+.info-box span
+{
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+@media only screen and (min-width: 1024px) {
+    .info-box
+    {
+        float: left;
+        width: 60%;
+    }
+
+    .moviePoster
+    {
+        width: 35vh;
+        margin: 0 3vw;
+    }
+  }

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>MovieApp</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1">
+    </head>
+    <body>
+        <% if(result===undefined || result.length <= 0) { %>
+            <h2 class="head">Sorry. Movie not found =(</h2>
+            <% } else { %>
+            <%- include("partials/search") %>
+            <h2 class="head">Result:</h2>
+            <% result.forEach(function(movie) { %>
+                <a href="/show?movieID=<%= movie.imdbID %>" class="movie-box">
+                    <div>
+                        <p class="title"><%= movie.Title %></p>
+                            <div class="img-box">
+                                <img src="<%= movie.Poster %>" alt="Poster">
+                            </div>
+                        <p class="year"><%= movie.Year %></p>
+                    </div>
+                </a>
+        <%});}%>
+    </body>
+</html>
+
